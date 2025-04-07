@@ -1,1 +1,24 @@
-<p>memory works!</p>
+<body>
+  <div class="container">
+    <h1>Memory Game</h1>
+    <div class="grid">
+      @for (card of cards; track card.value) {
+      <div (click)="flipCard(card)">
+        @if(card.flipped){
+        <div class="card-front"></div>
+        } @else {
+        <div class="card-back">
+          <span>{{ card.value }}</span>
+        </div>
+        }
+      </div>
+      }
+    </div>
+    @if (gameWon) {
+    <h2>You won!</h2>
+    } @if (flips > 0) {
+    <h2>Flips: {{ flips }}</h2>
+    }
+    <button routerLink="/mainmenu" class="exit-btn">Exit</button>
+  </div>
+</body>
