@@ -1,0 +1,51 @@
+h1 {
+  color: black;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.choose-game,
+.exit {
+  width: 180px;
+  padding: 12px;
+  margin: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.choose-game {
+  background-color: #344e41;
+  color: white;
+}
+
+.exit {
+  background-color: #e63946;
+  color: white;
+}

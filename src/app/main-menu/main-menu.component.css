@@ -1,0 +1,121 @@
+/* Algemene instellingen */
+a {
+  text-decoration: none;
+  color: black;
+}
+p {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Hoofdcontainer */
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* Info knop */
+
+h2 {
+  display: inline-block;
+  color: black;
+  position: absolute; /* Absolute positionering */
+  left: 50%; /* Plaats het element in het midden van de container */
+  transform: translateX(-50%);
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-button {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Spelkeuzes */
+.game-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.game-button {
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Moeilijkheidsknoppen */
+.difficulty-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.difficulty-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.difficulty-button:hover {
+  transform: scale(1.1);
+}
+
+.easy {
+  background-color: green;
+  color: white;
+}
+
+.medium {
+  background-color: orange;
+  color: white;
+}
+
+.hard {
+  background-color: red;
+  color: white;
+}
