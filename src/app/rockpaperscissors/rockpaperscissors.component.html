@@ -1,1 +1,32 @@
-<p>rockpaperscissors works!</p>
+<body>
+  <div class="container">
+    <h1>Rock, Paper, Scissors</h1>
+    <h2>Make your move!</h2>
+
+    @if(userChoice){
+    <h2>Your choice: {{ userChoice | uppercase }}</h2>
+    }
+    <div class="choices">
+      <button class="choice-btn" (click)="play('rock')">
+        <img class="option" src="rock.png" alt="Rock" />
+      </button>
+      <button class="choice-btn" (click)="play('paper')">
+        <img class="option" src="paper.png" alt="Paper" />
+      </button>
+      <button class="choice-btn" (click)="play('scissors')">
+        <img class="option" src="scissors.png" alt="Scissors" />
+      </button>
+    </div>
+    @if(gameStarted && countdown > 0){
+    <h2>Computer is making a move... {{ countdown }}</h2>
+
+    } @if (userChoice && computerChoice && countdown === 0) {
+    <div>
+      <h2>Computer's choice: {{ computerChoice | uppercase }}</h2>
+      <h2 class="result">{{ result }}</h2>
+      <button class="playagain-btn" (click)="playAgain()">Play again!</button>
+    </div>
+    }
+    <button routerLink="/mainmenu" class="exit-btn">Exit</button>
+  </div>
+</body>
