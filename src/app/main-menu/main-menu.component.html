@@ -11,13 +11,25 @@
       <h2>GAMES</h2>
       <p-button class="info-button" (click)="showDialog()" label="Info" />
       <p-dialog
-        header="Header"
+        class="info-dialog"
+        header="Info"
         [modal]="true"
         [(visible)]="visible"
         [style]="{ width: '50rem' }"
         [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
         [maximizable]="true"
       >
+        <span> Memory </span>
+        <p>Try and match the the cards that have the same numbers!</p>
+        <span>Rush Hour</span>
+        <p>
+          Free the red rectangle by sliding the other rectangles out of its way.
+          Rectangles can only move horizontally or vertically, depending on how
+          they are positioned.
+        </p>
+        <span>Higher or Lower</span>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <span>Rock, Paper, Scissors</span>
         <p>Lorem ipsum dolor sit amet...</p>
       </p-dialog>
     </div>

@@ -5,6 +5,14 @@
   margin-left: 2rem;
 }
 
+.info-dialog p {
+  color: white;
+}
+.info-dialog span {
+  color: white;
+  font-size: x-large;
+}
+
 .titelcontainer {
   display: flex;
   justify-content: center;

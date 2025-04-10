@@ -26,7 +26,7 @@ body {
   width: 8rem;
   height: 3rem;
   position: absolute;
-  top: 50%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px; /* Rounded edges */
