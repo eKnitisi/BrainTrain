@@ -8,13 +8,12 @@
   width: 3rem;
 }
 .choices {
-  margin: 20px;
+  margin: 0;
 }
 
 .choice-btn {
   font-size: 18px;
   padding: 10px 20px;
-  margin: 10px;
   cursor: pointer;
   background-color: white;
   color: white;
@@ -45,11 +44,12 @@
   background-color: red;
   width: 8rem;
   height: 3rem;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 20px; /* Rounded edges */
+  position: fixed; /* Vastzetten aan scherm */
+  bottom: 2%; /* Afstand tot onderkant scherm */
+  left: 50%; /* Horizontaal centreren */
+  transform: translateX(-50%); /* Alleen horizontaal centreren */
+  border-radius: 20px;
+  z-index: 999; /* Zorg dat hij boven andere elementen ligt */
 }
 .exit-btn:hover {
   background-color: darkred;
