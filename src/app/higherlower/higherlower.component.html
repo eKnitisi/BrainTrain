@@ -1,5 +1,23 @@
 <body>
   <div class="container">
+    <div class="guess-container">
+      <h1>Guess the Number</h1>
+      <p>Pick a number between 1 and 100</p>
+
+      <input
+        type="number"
+        [(ngModel)]="guess"
+        placeholder="Enter your guess"
+        min="1"
+        max="100"
+      />
+      <button (click)="submitGuess()">Guess</button>
+
+      <p class="feedback">{{ message }}</p>
+
+      <button class="reset-btn" (click)="resetGame()">Reset</button>
+    </div>
+
     <button routerLink="/mainmenu" class="exit-btn">Exit</button>
   </div>
 </body>

@@ -1,24 +1,20 @@
 <body>
   <div class="container">
     <h1>Memory Game</h1>
+    @if (gameWon) {
+    <h2 class="win-message">🎉 Good job! 🎉</h2>
+    }
     <div class="grid">
-      @for (card of cards; track card.value) {
-      <div (click)="flipCard(card)">
-        @if(card.flipped){
-        <div class="card-front"></div>
-        } @else {
-        <div class="card-back">
-          <span>{{ card.value }}</span>
-        </div>
-        }
+      @for (square of squares; track square.id) {
+      <div
+        class="clickable-square"
+        [class.revealed]="square.revealed || square.matched"
+        (click)="onSquareClick(square)"
+      >
+        {{ square.revealed || square.matched ? square.value : "?" }}
       </div>
       }
     </div>
-    @if (gameWon) {
-    <h2>You won!</h2>
-    } @if (flips > 0) {
-    <h2>Flips: {{ flips }}</h2>
-    }
     <button routerLink="/mainmenu" class="exit-btn">Exit</button>
   </div>
 </body>

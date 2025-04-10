@@ -12,6 +12,50 @@ export class MemoryComponent {
   flipped: number[] = [];
   gameWon: boolean = false;
   flips: number = 0;
+  squares = Array.from({ length: 16 }, (_, i) => ({
+    value: Math.floor(i / 2), // 8 pairs
+    revealed: false,
+    matched: false,
+    id: i,
+  })).sort(() => Math.random() - 0.5); // Shuffle
+
+  flippedCards: any[] = [];
+  
+  onSquareClick(square: any) {
+    if (square.revealed || square.matched || this.flippedCards.length === 2) return;
+
+    square.revealed = true;
+    this.flippedCards.push(square);
+
+    if (this.flippedCards.length === 2) {
+      setTimeout(() => {
+        const [a, b] = this.flippedCards;
+        if (a.value === b.value) {
+          a.matched = b.matched = true;
+        } else {
+          a.revealed = b.revealed = false;
+        }
+        this.flippedCards = [];
+        if (this.squares.every(s => s.matched)) {
+          this.gameWon = true;
+          setTimeout(() => this.resetGame(), 3000); // Reset after 3 sec
+        }
+      }, 1000); // 1 second delay before hiding
+    }
+  }
+  resetGame() {
+    const values = Array.from({ length: 8 }, (_, i) => i).flatMap(v => [v, v]);
+    this.squares = values
+      .sort(() => Math.random() - 0.5)
+      .map((value, index) => ({
+        value,
+        revealed: false,
+        matched: false,
+        id: index,
+      }));
+    this.flippedCards = [];
+    this.gameWon = false;
+  }
 
   ngOnInit() {
     this.initGame();
@@ -62,4 +106,5 @@ export class MemoryComponent {
       alert('Congratulations, you won the game!');
     }
   }
+
 }
