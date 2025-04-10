@@ -14,6 +14,16 @@ table{
     cursor: pointer;
 }
 
+#exit {
+    color: rgba(255, 0, 0, 0.648);
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    font-size: 48px; /* Increase the size of the => sign */
+    font-weight: bold; /* Make it bold */
+    position: relative;
+    margin: 10px;
+}
+
 .button_1 {background-color: rgb(157, 255, 0)}
 .button_2 {background-color: rgb(255, 208, 0)}
 .button_3 {background-color: rgb(255, 123, 0)}
