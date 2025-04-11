@@ -2,7 +2,26 @@ table{
     background-color: rgb(95, 95, 95);
     border: 5px solid #000000;
 }
+td {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    text-align: center; /* Centreer de inhoud van de cellen */
+    position: relative; /* Nodig voor het positioneren van de exit-div */
+  }
 
+.exit-div{
+    position: absolute; /* Plaats de div absoluut binnen de cel */
+    top: 50%; /* Verticaal centreren */
+    left: 50%; /* Horizontaal centreren */
+    transform: translate(-50%, -50%); /* Perfect centreren */
+    width: 100%; /* Zorg ervoor dat de div dezelfde breedte heeft als de cel */
+    height: 100%; /* Zorg ervoor dat de div dezelfde hoogte heeft als de cel */
+    font-size: 48px; /* Vergroot de tekst van "=>" */
+    font-weight: bold; /* Maak de tekst vetgedrukt */
+    color: rgba(255, 0, 0, 0.648);
+    overflow: hidden; /* Zorg ervoor dat de tekst niet buiten de div komt */
+  }
 .button{
     border: none;
     color: rgb(0, 0, 0);
@@ -15,14 +34,10 @@ table{
 }
 
 #exit {
-    color: rgba(255, 0, 0, 0.648);
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
-    font-size: 48px; /* Increase the size of the => sign */
-    font-weight: bold; /* Make it bold */
-    position: relative;
-    margin: 10px;
-}
+    vertical-align: middle;
+    overflow: hidden; /* Dit zorgt ervoor dat te grote inhoud wordt verborgen */
+    text-align: center; /* Optioneel, om de inhoud mooi uit te lijnen */
+  }
 
 .button_1 {background-color: rgb(157, 255, 0)}
 .button_2 {background-color: rgb(255, 208, 0)}

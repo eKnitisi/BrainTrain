@@ -75,13 +75,13 @@ function generate_board_html(board) {
           html_string +
           '<td onclick = board_click_handler(this) id="exit" class="car _' +
           board[row][element] +
-          '">  => </td>';
+          '">  <div class="exit-div"> => </div></td>';
       } else if (row === 2 && element === 5) {
         html_string =
           html_string +
           '<td onclick = board_click_handler(this) id="exit" class="car _' +
           board[row][element] +
-          '"> => </td>';
+          '"> <div class="exit-div"> => </div> </td>';
       } else {
         html_string =
           html_string +
