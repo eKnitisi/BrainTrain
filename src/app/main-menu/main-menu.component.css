@@ -74,7 +74,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.info-button {
+::ng-deep .info-button {
   margin-top: 1rem;
   margin-left: auto;
   margin-bottom: 20px;
@@ -84,6 +84,7 @@ h2 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
 }
 
 /* Spelkeuzes */
@@ -140,5 +141,10 @@ h2 {
 
 .hard {
   background-color: red;
+  color: white;
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+  background-color: #007bff;
   color: white;
 }
