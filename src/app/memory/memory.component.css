@@ -1,12 +1,12 @@
 .container {
   text-align: center;
-  background-color: white;
+  background-color: rgb(146, 236, 130);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   width: 80%;
   max-width: 500px;
-  height: 100vh;
+  height: 95vh;
   position: relative;
   overflow: auto; /* voorkomt dat inhoud er buiten komt */
 }
@@ -23,7 +23,7 @@ body {
 }
 
 .exit-btn {
-  background-color: red;
+  background-color: rgb(254, 23, 23);
   width: 8rem;
   height: 3rem;
   position: fixed; /* Vastzetten aan scherm */
@@ -35,7 +35,7 @@ body {
 }
 
 .exit-btn:hover {
-  background-color: darkred;
+  background-color: rgb(138, 56, 56);
 }
 
 .grid {
@@ -45,9 +45,8 @@ body {
   justify-content: center;
   margin-top: 20px;
   width: 100%;
-  height: 100%;
-  background-color: lightgray;
-  margin-bottom: 8rem;
+  height: 70vh;
+  background-color: rgb(146, 236, 130);
 }
 
 .card {
@@ -87,7 +86,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   font-size: 2rem;
 }
 
@@ -101,20 +99,20 @@ h2 {
   font-size: 1.5rem;
   color: #666;
 }
-
+/* 
 .clickable-square {
   display: flex;
-  justify-content: center; /* horizontal centering */
-  align-items: center; /* vertical centering */
-  width: 100%; /* optional: fills the grid cell */
-  height: 100%; /* optional: fills the grid cell */
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100%; 
   background-color: #2196f3;
   color: white;
   font-size: 24px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
 .clickable-square:hover {
   background-color: #66bb6a;
@@ -124,7 +122,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2196f3;
+  background-color: #4caf50;
   color: white;
   font-size: 2rem;
   border-radius: 8px;
@@ -135,10 +133,10 @@ h2 {
 }
 
 .clickable-square.revealed {
-  background-color: #4caf50;
+  background-color: #ff746c;
   transform: scale(1.05);
 }
 
 .clickable-square:hover {
-  background-color: #66bb6a;
+  background-color: #d9635c;
 }

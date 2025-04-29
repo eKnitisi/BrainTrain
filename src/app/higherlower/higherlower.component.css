@@ -1,6 +1,6 @@
 .container {
   text-align: center;
-  background-color: white;
+  background-color: rgb(146, 236, 130);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -15,7 +15,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@ body {
 }
 
 .guess-container {
-  background-color: white;
+  background-color: #d9ffcf;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -48,7 +48,8 @@ body {
 }
 
 input[type="number"] {
-  color: #2196f3;
+  color: #87b9e1;
+  background-color: #91e8eb;
   padding: 10px;
   width: 60%;
   margin: 10px 0;
@@ -59,14 +60,14 @@ button {
   padding: 10px 20px;
   margin: 10px;
   border: none;
-  background-color: #2196f3;
+  background-color: #77c260;
   color: white;
   border-radius: 8px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0b7dda;
+  background-color: #558a45;
 }
 
 .feedback {
@@ -75,9 +76,9 @@ button:hover {
 }
 
 .reset-btn {
-  background-color: #e91e63;
+  background-color: #77c260;
 }
 
 .reset-btn:hover {
-  background-color: #c2185b;
+  background-color: #558a45;
 }

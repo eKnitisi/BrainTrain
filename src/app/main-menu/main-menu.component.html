@@ -3,14 +3,14 @@
     <!-- Titel -->
     <div class="titelcontainer">
       <h1>Brain Train</h1>
-      <img class="h1logo" src="brainTrainLogo.png" alt="" />
+      <img class="h1logo" src="brainTrainLogo2.png" alt="" />
     </div>
 
     <!-- Info knop -->
     <div class="info-container">
       <h2>GAMES</h2>
       <p-button class="info-button" (click)="showDialog()" label="Info" />
-      <p-dialog
+      <!--       <p-dialog
         class="info-dialog"
         header="Info"
         [modal]="true"
@@ -19,6 +19,15 @@
         [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
         [contentStyle]="{ 'background-color': '#007BFF', color: 'white' }"
         [maximizable]="true"
+      > -->
+      <p-dialog
+        header="Info"
+        [modal]="true"
+        [(visible)]="visible"
+        [style]="{ width: '50rem' }"
+        [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+        [contentStyle]="{ 'background-color': '#007BFF', color: 'white' }"
+        [maximizable]="false"
       >
         <span> Memory </span>
         <p>Try and match the the cards that have the same numbers!</p>
@@ -44,7 +53,12 @@
     <!-- Spelkeuzes -->
     <div class="game-buttons">
       <div>
-        <img src="memory.png" class="game-button" alt="" routerLink="/memory" />
+        <img
+          src="memory2.png"
+          class="game-button"
+          alt=""
+          routerLink="/memory"
+        />
         <p>Memory</p>
       </div>
       <div>
@@ -56,9 +70,9 @@
         />
         <p>Rush Hour</p>
       </div>
-      <div>
+      <div id="higherlower">
         <img
-          src="higher-lower.png"
+          src="higherlower2.png"
           class="game-button"
           alt=""
           routerLink="/higherlower"
