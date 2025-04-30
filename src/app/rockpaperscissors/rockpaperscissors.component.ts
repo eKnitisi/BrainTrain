@@ -1,6 +1,8 @@
 import { UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import confetti from 'canvas-confetti';
+
 @Component({
   selector: 'app-rockpaperscissors',
   imports: [UpperCasePipe, RouterLink],
@@ -43,6 +45,7 @@ export class RockpaperscissorsComponent {
         (this.userChoice === 'paper' && this.computerChoice === 'rock') ||
         (this.userChoice === 'scissors' && this.computerChoice === 'paper')
       ) {
+        this.triggerConfetti();
         return 'You win!';
       } else {
         return 'Computer wins!';
@@ -57,4 +60,12 @@ export class RockpaperscissorsComponent {
       this.gameStarted = false;
       clearInterval(this.timer);
     }
+
+      triggerConfetti() {
+        confetti({
+          particleCount: 150,
+          spread: 100,
+          origin: { x: 0.5, y: 0.5 } // precies midden van het scherm
+        });
+      }
   }

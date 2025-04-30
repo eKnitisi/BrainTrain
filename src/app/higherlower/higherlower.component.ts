@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import confetti from 'canvas-confetti';
 @Component({
   selector: 'app-higherlower',
   imports: [RouterLink,FormsModule],
@@ -30,11 +30,19 @@ export class HigherlowerComponent {
     this.attempts++;
 
     if (this.guess === this.targetNumber) {
+      this.triggerConfetti();
       this.message = `🎉 Correct! You guessed it in ${this.attempts} tries.`;
     } else if (this.guess < this.targetNumber) {
       this.message = '📉 Too low. Try a higher number.';
     } else {
       this.message = '📈 Too high. Try a lower number.';
     }
+  }
+  triggerConfetti() {
+    confetti({
+      particleCount: 150,
+      spread: 100,
+      origin: { x: 0.5, y: 0.5 } // precies midden van het scherm
+    });
   }
 }

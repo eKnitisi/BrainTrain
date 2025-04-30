@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-memory',
@@ -28,10 +29,15 @@ export class MemoryComponent {
     this.flippedCards.push(square);
 
     if (this.flippedCards.length === 2) {
+      const [a, b] = this.flippedCards;
+      if (a.value === b.value) {
+        this.triggerConfetti();
+      }
       setTimeout(() => {
         const [a, b] = this.flippedCards;
         if (a.value === b.value) {
           a.matched = b.matched = true;
+
         } else {
           a.revealed = b.revealed = false;
         }
@@ -57,6 +63,19 @@ export class MemoryComponent {
     this.gameWon = false;
   }
 
+  function() {
+    const runConfetti = document.querySelector('#hs-run-on-click-run-confetti');
+    runConfetti?.addEventListener('click', () => {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: {
+          y: 0.6
+        }
+      });
+    });
+  };
+  
   ngOnInit() {
     this.initGame();
   }
@@ -84,6 +103,14 @@ export class MemoryComponent {
     if (this.flipped.length === 2) {
       setTimeout(() => this.checkMatch(), 1000); // Controleer of de kaarten overeenkomen na 1 seconde
     }
+  }
+
+  triggerConfetti() {
+    confetti({
+      particleCount: 150,
+      spread: 100,
+      origin: { x: 0.5, y: 0.5 } // precies midden van het scherm
+    });
   }
 
   // Controleer of de twee omgedraaide kaarten overeenkomen
