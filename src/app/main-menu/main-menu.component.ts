@@ -17,4 +17,8 @@ export class MainMenuComponent {
 
   }
 
+  ngOnInit() {
+    this.visible = true;
+  }
+
 }
