@@ -9,6 +9,7 @@
   height: 95vh;
   position: relative;
   overflow: auto; /* voorkomt dat inhoud er buiten komt */
+  margin-bottom: 3rem;
 }
 
 body {
